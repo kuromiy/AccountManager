@@ -1,0 +1,10 @@
+{
+  "restartbale": "rs",
+  "watch": [
+    "dist/index.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "exec": "electron ./dist/index.js"
+}

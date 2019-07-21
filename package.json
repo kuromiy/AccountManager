@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build:dev": "npx webpack --config .project/webpack.renderer.config.js&&npx webpack --config .project/webpack.main.config.js",
-    "dev": "npm run build:dev&&electron dist/index.js"
+    "dev": "npm run build:dev&&electron dist/index.js",
+    "webpack:main": "npx webpack --config .project/webpack.main.config.js --watch",
+    "webpack:renderer": "npx webpack --config .project/webpack.renderer.config.js --watch",
+    "nodemon": "npx nodemon --config nodemon.json",
+    "browser-sync": "npx browser-sync start --config bs-config.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +24,14 @@
   "homepage": "https://github.com/kuromiy/AccountManager#readme",
   "devDependencies": {
     "@types/node": "^12.6.8",
+    "browser-sync": "^2.26.7",
     "css-loader": "^3.1.0",
     "electron": "^5.0.7",
     "electron-builder": "^21.1.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "ts-loader": "^6.0.4",

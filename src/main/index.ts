@@ -13,7 +13,8 @@ const createWindow = () => {
     width: SIZE * 35,
   });
 
-  win.loadFile(path.join(__dirname, "./index.html"));
+  win.loadURL("http://localhost:3000");
+  // win.loadFile(path.join(__dirname, "./index.html"));
   win.setMenu(null);
 
   win.webContents.openDevTools();
