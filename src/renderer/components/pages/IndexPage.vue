@@ -1,6 +1,7 @@
 <template>
   <div class="index-page">
     <SideBar></SideBar>
+    <router-view />
   </div>
 </template>
 
@@ -12,9 +13,7 @@ import SideBar from "../organisms/SideBar.vue";
   name: "index-page",
   components: { SideBar }
 })
-export default class IndexPage extends Vue {
-  
-}
+export default class IndexPage extends Vue {}
 </script>
 
 <style lang="scss" scoped>

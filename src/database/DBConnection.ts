@@ -7,7 +7,8 @@ export class DBConnection {
     return new Promise(async (resolve, reject) => {
       if (!this._conn) {
         const db: TypeFileDB = new TypeFileDB();
-        this._conn = await db.connection(path.join(remote.app.getPath("exe"), "db"));
+        console.log(path.join(__dirname, "db"));
+        this._conn = await db.connection(path.join(remote.app.getPath("userData"), "db"));
       }
       resolve(this._conn);
     });

@@ -34,6 +34,7 @@ class MailAddressModule extends VuexModule {
 
   @Mutation
   public DELETE_MAIL_ADDRESS(mailaddress: MailAddress) {
+    console.log("DELETE");
     this._mailaddresses.forEach((fMailAddress: MailAddress, index: number) => {
       if (fMailAddress._id === mailaddress._id) this._mailaddresses.splice(index, 1);
     });
@@ -59,7 +60,15 @@ class MailAddressModule extends VuexModule {
   public async updateMailAddress(mailAddress: MailAddress) {
     const conn: IFConnection = await DBConnection.instance();
     const mailAddressTable: Table<MailAddress> = conn.table(MailAddress);
-    await mailAddressTable.update({_id: mailAddress._id}, {});
+    await mailAddressTable.update(
+      {
+        _id: mailAddress._id,
+      },
+      {
+        _mailaddress: mailAddress._mailaddress,
+        _password: mailAddress._password,
+        _url: mailAddress._url,
+      });
     this.UPDATE_MAIL_ADDRESS(mailAddress);
   }
 

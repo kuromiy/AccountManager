@@ -19,9 +19,9 @@ import BaseIcon from "../atoms/BaseIcon.vue";
 })
 export default class SideBar extends Vue {
   private datas = [
-    { name: "Account", routerInfo: "" },
-    { name: "Service", routerInfo: "" },
-    { name: "Mail", routerInfo: "" },
+    { name: "Account", routerInfo: {path: "/account"} },
+    { name: "Service", routerInfo: {path: "/service"} },
+    { name: "Mail", routerInfo: {path: "/mail"} },
   ];
 
   public movePage(data: any) {

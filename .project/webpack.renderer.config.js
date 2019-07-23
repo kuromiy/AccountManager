@@ -2,6 +2,7 @@ const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
   mode: "development",
@@ -48,6 +49,7 @@ module.exports = {
       }
     ]
   },
+  externals: [nodeExternals()],
   resolve: {
     alias: {
       "vue$": "vue/dist/vue.common.js",

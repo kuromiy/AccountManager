@@ -10,7 +10,7 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true,
     },
-    width: SIZE * 35,
+    width: SIZE * 25,
   });
 
   win.loadURL("http://localhost:3000");
