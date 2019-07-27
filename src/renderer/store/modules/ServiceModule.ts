@@ -52,6 +52,7 @@ class ServiceModule extends VuexModule {
     const serviceTable: Table<Service> = conn.table(Service);
     const insertServise: Service = await serviceTable.insert(service);
     this.ADD_SERVICE(insertServise);
+    return insertServise;
   }
 
   @Action

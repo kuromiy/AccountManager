@@ -16,6 +16,11 @@ export default new Router({
       path: "/mail",
     },
     {
+      component: require("../components/organisms/ServiceAccountPage.vue").default,
+      name: "service-account-page",
+      path: "/account",
+    },
+    {
       path: "*",
       redirect: "/",
     },

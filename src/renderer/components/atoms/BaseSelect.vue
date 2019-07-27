@@ -1,5 +1,5 @@
 <template>
-  <select :value="value" @input="updateSelect">
+  <select class="base-select" :value="value" @input="updateSelect">
     <slot v-bind:opts="opts"></slot>
   </select>
 </template>
@@ -20,3 +20,12 @@ export default class BaseSelect extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.base-select {
+  border-radius: 3px;
+  padding: 6px;
+  border: 1px solid #313131;
+}
+</style>
+

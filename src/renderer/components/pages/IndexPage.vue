@@ -19,7 +19,7 @@ export default class IndexPage extends Vue {}
 <style lang="scss" scoped>
 .index-page {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 90px 1fr;
   height: 100%;
 }
 </style>
