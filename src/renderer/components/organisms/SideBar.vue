@@ -34,6 +34,7 @@ export default class SideBar extends Vue {
 .side-bar {
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #313131;
 }
 </style>
 

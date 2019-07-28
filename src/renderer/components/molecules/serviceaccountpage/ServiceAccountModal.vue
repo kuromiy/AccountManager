@@ -92,6 +92,7 @@ export default class ServiceAccountModal extends Vue {
     } else {
       const newService: Service = new Service();
       newService._name = this.serviceName;
+      newService._url = "";
       // TODO ここでVuexと通信するべきではない？
       const tmp: Service = await serviceModule.addService(newService);
       serviceAccount._service_id = tmp._id;

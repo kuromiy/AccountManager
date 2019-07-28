@@ -21,6 +21,11 @@ export default new Router({
       path: "/account",
     },
     {
+      component: require("../components/organisms/ServicePage.vue").default,
+      name: "service-page",
+      path: "/service",
+    },
+    {
       path: "*",
       redirect: "/",
     },
